@@ -1,7 +1,11 @@
 {
-  "name": "ecs.fargate.floxdoc.web.frontend",
-  "version": "0.1.0",
+  "name": "boilerplate-nextjs-typescript-with-antdesign",
+  "version": "1.0.0",
   "private": true,
+  "author": {
+    "name": "Fandi A Riyanto",
+    "url": "https://github.com/FandiAR"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
