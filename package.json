@@ -23,7 +23,8 @@
 		"checker": "yarn check:lint && yarn check:prettier && yarn check:dead-ts && yarn check:ts && yarn test",
 		"format:lint": "eslint . --fix --quiet --ignore-path .gitignore",
 		"format:prettier": "prettier --config .prettierrc . --ignore-path .gitignore --write --loglevel silent",
-		"formatter": "yarn format:lint; yarn format:prettier"
+		"formatter": "yarn format:lint; yarn format:prettier",
+		"analyze": "ANALYZE=true npm run build"
 	},
 	"dependencies": {
 		"@ant-design/icons": "^4.7.0",
@@ -35,6 +36,7 @@
 		"styled-components": "^5.3.6"
 	},
 	"devDependencies": {
+		"@next/bundle-analyzer": "^13.0.2",
 		"@testing-library/jest-dom": "^5.16.5",
 		"@testing-library/react": "^13.4.0",
 		"@types/node": "18.11.9",
