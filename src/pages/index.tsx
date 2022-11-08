@@ -1,23 +1,20 @@
-import {SmileOutlined} from '@ant-design/icons';
-import {Button, Result} from 'antd';
-import Link from 'next/link';
-import React from 'react';
+import dynamic from 'next/dynamic';
 
-const App: React.FC = () => (
-	<Result
-		icon={<SmileOutlined />}
-		title="Boilerplate NextJs with AntDesign, Jest, Eslint, Prettier, and Pre-commit Husky"
-		extra={
-			<Button type="primary">
-				<Link
-					href="https://github.com/FandiAR/boilerplate-nextjs-typescript"
-					target="_blank"
-				>
-					Go To Repository
-				</Link>
-			</Button>
-		}
-	/>
-);
+const Head = dynamic(() => import('next/head'));
+const HomeContainer = dynamic(() => import('@containers/HomeContainer'));
 
-export default App;
+const HomePage = () => {
+	const githubUrl = 'https://github.com/FandiAR/boilerplate-nextjs-typescript';
+
+	const handleClickButton = () => window.open(githubUrl, '_ blank');
+
+	return (
+		<>
+			<Head>
+				<title>Home | Boilerplate NextJs AntDesign</title>
+			</Head>
+			<HomeContainer handleClickButton={handleClickButton} />
+		</>
+	);
+};
+export default HomePage;
