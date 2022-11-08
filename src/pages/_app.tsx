@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export default function App({Component, pageProps}: AppProps) {
+const BoilerplateNextJs = ({Component, pageProps}: AppProps) => {
 	return (
 		<>
 			<GlobalStyle />
@@ -26,4 +26,5 @@ export default function App({Component, pageProps}: AppProps) {
 			<Component {...pageProps} />
 		</>
 	);
-}
+};
+export default BoilerplateNextJs;
